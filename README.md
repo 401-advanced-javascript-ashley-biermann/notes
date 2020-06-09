@@ -1,13 +1,13 @@
-# LAB - Class xx
+# LAB - Class 01
 
-## Project: Project Name Here
+## Project: Notesy
 
-### Author: Student/Group Name
+### Author: Ashley Biermann
 
 ### Links and Resources
 
-- [submission PR](http://xyz.com)
-- [ci/cd](http://xyz.com) (GitHub Actions)
+- [submission PR](https://github.com/401-advanced-javascript-ashley-biermann/notes/pull/2)
+- [ci/cd]() (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable)
 
@@ -15,14 +15,12 @@
 
 #### `.env` requirements (where applicable)
 
-i.e.
-
 - `PORT` - Port Number
 - `MONGODB_URI` - URL to the running mongo instance/db
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `npm start`
+`npm start`
 
 #### How to use your library (where applicable)
 
@@ -34,4 +32,4 @@ i.e.
 
 #### UML
 
-Link to an image of the UML for your application and response to events
+- [image](notesy01.jpg)
