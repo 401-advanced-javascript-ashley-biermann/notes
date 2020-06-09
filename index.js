@@ -2,8 +2,8 @@
 
 // node modules
 const Input = require('./lib/input');
-const notes = require('./lib/notes');
+const Note = require('./lib/notes');
 
-const newNote = new Input;
+const input = new Input;
 
-console.log(newNote);
+console.log(input);
