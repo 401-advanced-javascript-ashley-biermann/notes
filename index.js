@@ -1,9 +1,12 @@
 'use strict';
 
+// consider putting process.args here as a global and passing it into Input
 // node modules
 const Input = require('./lib/input');
-const notes = require('./lib/notes');
+const Note = require('./lib/notes');
 
-const newNote = new Input;
+const input = new Input;
+const note = new Note(input);
 
-console.log(newNote);
+console.log(input);
+console.log(note);
