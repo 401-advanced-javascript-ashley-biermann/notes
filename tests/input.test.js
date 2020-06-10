@@ -1,21 +1,24 @@
 'use strict';
 
-const minimist = require('minimist');
-const Input = require('../lib/input');
-
+// making the fake test data through mock
 jest.mock('minimist');
+const minimist = require('minimist');
 
+//  minimist wants Object.keys(parsedArgs)[1] and Object.values(parsedArgs[1])... so this mock represents that
 minimist.mockImplementation(() => {
   return {
-    action: 'add',
-    payload: 'check out my sweet note from the tests!',
+    x: '',
+    a: 'passing test',
+    payload: ''
   }
 });
 
+const Input = require('../lib/input');
+
 describe('Testing the Input module', () => {
-  it('should return an object with keys of action and payload', () => {
-    let options = new Input;
+  it('should return the keys of action and payload', () => {
+    let options = new Input();
     expect(options.action).toBe('add');
-    expect(options.payload).toBe('check out my sweet note from the tests!');
+    expect(options.payload).toBe('passing test');
   });
 });
