@@ -2,7 +2,6 @@
 
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Request = require('./lib/model/notes-schema');
 
 // consider putting process.args here as a global and passing it into Input
 // node modules
@@ -14,19 +13,12 @@ mongoose.connect(process.env.MONGO_ATLAS_URI, {
   useUnifiedTopology: true,
 });
 
-const db = mongoose.connection;
-
-db.on('open', () => {
-  console.log('connected to mongo');
-});
-
-
 const input = new Input;
 const note = new Note(input);
 note.execute();
 
 
-// TODO: Update this to reflect a better on screen confirmation message for the user (probably `note`)
+// TODO: Remove this eventually... it will be replaced by the Note methods`
 console.log(input);
 console.log(note);
 
@@ -36,3 +28,9 @@ console.log(note);
 // 1 - instantiation in JS is for the mongoose model
 // 2 - persistence on mongoDB
 
+// debugging tool, and shows proof of life - not actually needed to connect to DB
+
+// const db = mongoose.connection;
+// db.on('open', () => {
+  //   console.log('connected to mongo');
+  // });
