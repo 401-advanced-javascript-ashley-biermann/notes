@@ -3,6 +3,7 @@
 const Note = require('../lib/notes');
 const supergoose = require('cf-supergoose');
 
+
 beforeAll(() => {
   supergoose.startDB();
 })
